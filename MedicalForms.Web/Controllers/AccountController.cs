@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using System.IO;
+using MedicalForms.Web.Models;
+using MedicalForms.Web.Controllers;
 
 namespace Bookmarks.Web.Controllers
 {

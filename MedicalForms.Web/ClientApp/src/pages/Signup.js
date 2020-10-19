@@ -6,8 +6,6 @@ import { Link } from 'react-router-dom';
 class Signup extends React.Component {
 
     state = {
-        firstName: '',
-        lastName: '',
         email: '',
         password: ''
     }
@@ -30,20 +28,16 @@ class Signup extends React.Component {
         return (
             < div className="row">
                 <div className="col-md-6 col-md-offset-3 well">
-                    <h3>Sign up for a new account</h3>
+                    <h3>Create account</h3>
                     <form onSubmit={this.onFormSubmit}>
-                        <br />
-                        <input onChange={this.onTextChange} type="text" value={this.state.firstName} name="firstName" placeholder="First Name" className="form-control" />
-                        <br />
-                        <input onChange={this.onTextChange} type="text" value={this.state.lastName} name="lastName" placeholder="Last Name" className="form-control" />
-                        <br />
+                        <br/>
                         <input onChange={this.onTextChange} type="text" value={this.state.email} name="email" placeholder="Email" className="form-control" />
                         <br />
                         <input onChange={this.onTextChange} type="password" value={this.state.password} name="password" placeholder="Password" className="form-control" />
                         <br />
                         <button className="btn btn-primary btn-block">Signup</button>
                         <br />
-                        <span>Already signed up? Log in <Link to="/login">here</Link>.</span>
+                        <span>Already have an account? Log in <Link to="/login">here</Link>.</span>
                     </form>
                 </div>
             </div>

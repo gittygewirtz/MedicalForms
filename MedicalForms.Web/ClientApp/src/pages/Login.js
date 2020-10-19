@@ -1,7 +1,7 @@
 ﻿import React from 'react';
 import axios from 'axios';
 import { produce } from 'immer';
-import { UserContext } from '..UserContext';
+import { UserContext } from '../components/UserContext';
 import { Link } from 'react-router-dom';
 
 class Login extends React.Component {
@@ -28,7 +28,10 @@ class Login extends React.Component {
         setUser(data);
         const isValidLogin = !!data;
         this.setState({ isValidLogin });
-        this.props.history.push('/');
+        
+        if (isValidLogin) {
+            this.props.history.push('/');
+        }
     }
 
     render() {
@@ -48,7 +51,7 @@ class Login extends React.Component {
                                     <br />
                                     <button className="btn btn-primary btn-block">Login</button>
                                     <br />
-                                    <span>New to MyBookmarks? Sign up <Link to="/signup">here</Link>.</span>
+                                    <span>Don't have an account? Sign up <Link to="/signup">here</Link>.</span>
                                 </form>
                             </div>
                         </div>
