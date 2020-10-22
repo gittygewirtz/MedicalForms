@@ -8,6 +8,7 @@ namespace MedicalForms.Data
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public DateTime DOB { get; set; }
+        public int UserId { get; set; }
 
     }
 }

@@ -41,16 +41,16 @@ namespace MedicalForms.Web.Controllers
         //}
 
 
-        //[HttpPost]
-        //[Route("addbookmark")]
-        //public void AddBookmark(Bookmark bookmark)
-        //{
-        //    var repo = new BookmarkRepository(_connectionString);
-        //    var repo2 = new UserRepository(_connectionString);
-        //    var user = repo2.GetUserByEmail(User.Identity.Name);
-        //    bookmark.UserId = user.Id;
-        //    repo.AddBookmark(bookmark);
-        //}
+        [HttpPost]
+        [Route("addcamper")]
+        public void AddCamper(Camper camper)
+        {
+            var repo = new CamperRepository(_connectionString);
+            //var repo2 = new UserRepository(_connectionString);
+            //var user = repo2.GetUserByEmail(User.Identity.Name);
+            camper.UserId = 1;
+            repo.AddCamper(camper);
+        }
 
         //[HttpPost]
         //[Route("edit")]
